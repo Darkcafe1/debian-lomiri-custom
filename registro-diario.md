@@ -73,20 +73,15 @@ Distro experimental basada en **Debian 13 (trixie, estable)** con **Lomiri** com
 - **Decisión**: seguir con la estable para no reinstalar todo. Objetivo por ahora: dejar la distro lo más limpia posible y decidir después qué incluir en la ISO.
 - Consumo en reposo: unos 500-600 MB de RAM, muy satisfactorio para Lomiri.
 
-**Pendiente**
-- Warehouse (Flatpak): la instalación global falló por permisos; la alternativa es `flatpak install --user`. Sin confirmar.
 
 ---
 
 ## Pendientes generales
 
-- [ ] Crear el repositorio (Codeberg o GitHub) y subir este registro
-- [ ] README inicial con capturas (fastfetch y escritorio)
 - [ ] Exportar la receta: `apt-mark showmanual > paquetes-manuales.txt` y los ajustes de dconf
 - [ ] Hacer los ajustes de Lomiri por defecto con un archivo `.gschema.override` (en vez de `gsettings` en hooks)
 - [ ] Primera ISO mínima con `live-build` ("hola mundo")
 - [ ] Probar en hardware real, sobre todo el WiFi
-- [ ] Decidir cómo empaquetar OnlyOffice
 - [ ] Revisar que el nombre "Mirai Linux" no choque con otro proyecto
 - [ ] Gestor de software y opciones de pantalla en Lomiri: investigar si es limitación de la VM o de Lomiri
 
@@ -95,10 +90,21 @@ Distro experimental basada en **Debian 13 (trixie, estable)** con **Lomiri** com
 ## Plantilla para próximas entradas
 
 ```markdown
-## Día N — DD/MM/AAAA · Título corto
+## Día 4  — 25/10/2026 · Título corto
 
 **Hecho**
--
+-✅ Crear cuenta en GitHub
+	
+Hecho
+✅ Crear repositorio debian-lomiri-custom
+	
+Hecho
+✅ Subir registro-diario.md
+	
+Hecho
+✅ Crear .gitignore con reglas para ISO, VirtualBox, logs
+	
+Casi listo (solo falta el clic)
 
 **Problemas y soluciones**
 | Problema | Causa | Solución |
@@ -108,7 +114,8 @@ Distro experimental basada en **Debian 13 (trixie, estable)** con **Lomiri** com
 -
 
 **Pendiente**
--
-
-**Métricas** (opcional): paquetes, RAM en reposo, disco
-```
+-⏳ Mejorar el README.md con la presentación del proyecto
+	
+Pendiente
+⏳ Agregar scripts de construcción
+	
