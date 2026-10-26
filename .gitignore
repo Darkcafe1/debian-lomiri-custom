@@ -1,0 +1,28 @@
+# Archivos de imagen ISO
+*.iso
+*.img
+
+# Archivos de VirtualBox
+*.vdi
+*.vbox
+*.vbox-prev
+*.vmdk
+
+# Archivos de log y temporales
+*.log
+*.tmp
+*.swp
+*~
+
+# Directorios de construcción
+build/
+output/
+cache/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración personal
+*.local
+*.secret
