@@ -86,36 +86,18 @@ Distro experimental basada en **Debian 13 (trixie, estable)** con **Lomiri** com
 - [ ] Gestor de software y opciones de pantalla en Lomiri: investigar si es limitación de la VM o de Lomiri
 
 ---
-
-## Plantilla para próximas entradas
-
-```markdown
-## Día 4  — 25/10/2026 · Título corto
+## Día 4 — 25/10/2026 · Repositorio en GitHub
 
 **Hecho**
--✅ Crear cuenta en GitHub
-	
-Hecho
-✅ Crear repositorio debian-lomiri-custom
-	
-Hecho
-✅ Subir registro-diario.md
-	
-Hecho
-✅ Crear .gitignore con reglas para ISO, VirtualBox, logs
-	
-Casi listo (solo falta el clic)
+- Cuenta de GitHub creada.
+- Repositorio público `debian-lomiri-custom` creado.
+- Subido `registro-diario.md` (bitácora de los días 0 a 3).
+- Creado `.gitignore` con reglas para ISO, VirtualBox y logs.
 
-**Problemas y soluciones**
-| Problema | Causa | Solución |
-|---|---|---|
-
-**Decisiones**
--
+**Notas**
+- Día con poco tiempo frente a la PC; no hubo cambios en la VM.
 
 **Pendiente**
--⏳ Mejorar el README.md con la presentación del proyecto
-	
-Pendiente
-⏳ Agregar scripts de construcción
+- Crear el `README.md` con la presentación del proyecto.
+- Agregar scripts de construcción.
 	
