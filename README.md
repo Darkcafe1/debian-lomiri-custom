@@ -2,8 +2,7 @@
 
 Distro experimental con **Debian 13 (trixie, estable)** y **Lomiri** como escritorio, pensada para PC.
 
-> ⚠️ **Estado: pre-alfa.** Por ahora todo se prueba en una máquina virtual (VirtualBox). **Todavía no hay ISO descargable.**
-
+> ⚠️ **Estado: pre-alfa.** Por ahora todo se prueba en una máquina virtual (VirtualBox). 
 <!-- Captura pendiente: ![fastfetch](docs/img/fastfetch.png) -->
 
 ## ¿Qué es esto?
@@ -27,7 +26,7 @@ El proyecto parte de la idea de que Debian es una base estable, personalizable y
 | Escritorio | Lomiri (sesión Wayland) con LightDM |
 | Entorno de pruebas | VirtualBox |
 | Consumo de RAM en reposo | ~644 MiB (medido en la VM, día 3) |
-| ISO | No disponible todavía |
+| ISO | V01 |
 
 ## Filosofía del software
 
