@@ -52,7 +52,7 @@ La lista detallada de lo que se incluye, lo que se quita y lo que está en duda 
 - [x] Limpiar aplicaciones innecesarias
 - [x] Crear el repositorio y la bitácora
 - [ ] Exportar la receta desde la VM (paquetes, ajustes, versiones)
-- [ ] Primera ISO mínima con `live-build`
+- [x] Primera ISO mínima con `live-build`
 - [ ] Probar en hardware real (especialmente WiFi)
 - [ ] Instalador (por definir)
 - [ ] Branding y licencia
@@ -60,6 +60,21 @@ La lista detallada de lo que se incluye, lo que se quita y lo que está en duda 
 ## Contribuir
 
 El proyecto está en una etapa muy temprana. Ideas, correcciones y sugerencias son bienvenidas en los [Issues](../../issues).
+
+## Descargas
+
+> ⚠️ Pre-alfa. Son imágenes **live** (todavía no instalables).
+
+| Versión | Qué es | Tamaño | Descarga | SHA256 |
+|---|---|---|---|---|
+| v0.1 | Lomiri limpio y estable, en español | 1,6 GB | [MEGA](ENLACE) | `https://mega.nz/file/7SZkFRjR#Dn6J_gxN1Qh7zreK7CTFEj_xlsCKT2sO2yVKebbhTQk` |
+| v0.0 | Primera prueba, con todas las apps de Lomiri y LibreOffice | 2,0 GB | [MEGA](ENLACE) | `https://mega.nz/file/eeAxBIZI#63Skwrvbc3qoG8FY6-xFuLk-Rg_h5-QfUL0GpRPh1sk` |
+
+**Probar en VirtualBox:** Linux / Debian 64-bit, 2 GB de RAM o más, video 128 MB, controlador VMSVGA y aceleración 3D activada.
+
+**Problemas conocidos:** teclado en inglés por defecto; la Terminal se abre en la esquina.
+
+
 
 ## Aviso
 
