@@ -1,0 +1,3 @@
+#!/bin/sh
+apt-get purge -y 'libreoffice*' lomiri-camera-app lomiri-addressbook-app lomiri-cloudsync-app lomiri-dekko-app lomiri-docviewer-app lomiri-gallery-app lomiri-teleports-app lomiri-tfamanager-app lomiri-weather-app morph-browser zutty || true
+apt-get autoremove --purge -y || true
