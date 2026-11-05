@@ -232,3 +232,71 @@ Distro experimental basada en **Debian 13 (trixie, estable)** con **Lomiri** com
 - Quitar LibreOffice y apps no deseadas del lanzador en la ISO.
 - Decidir si se incluyen drivers VA-API y firmware WiFi (`firmware-*`).
 - Re-exportar `paquetes-manuales.txt`.
+
+- ## Día 13 — 03/11/2026 · ISO5: la primera ISO estable y limpia
+
+**Hecho**
+- Decidido volver a la base de la ISO1 (recomendados activados), la única que funcionó bien, y quitar las apps no deseadas con un hook de limpieza.
+- Verificado el estado de `~/mirai-iso`: lista de 41 paquetes y sin restos de la ISO4.
+- Cambiado `auto/config` a `--apt-recommends true`.
+- Creado el hook `0200-mirai-limpieza.hook.chroot`, que purga LibreOffice, Cámara, Contactos, Cloudsync, Dekko, Visor de documentos, Galería, Teleports, 2FA, Weather, Morph y Zutty.
+- **ISO5 construida y probada:** Lomiri estable, con fondo de pantalla y el sistema en español.
+
+**Resultado**
+- El lanzador muestra solo las apps elegidas: Calculadora, Calendario, Configuración, External Storage, Firefox ESR, Gestor de archivos, Synaptic, GDebi, Música, QDirStat, Reloj, Reproductor multimedia, Software, Terminal y Viewnior.
+
+| ISO | Qué era | Tamaño | Resultado |
+|---|---|---|---|
+| ISO1 | Recomendados activados, 4 paquetes | 2,0 GB | Funcionaba, con todas las apps |
+| ISO2 | Sin recomendados | 1,4 GB | Sin usuario |
+| ISO3 | Sin recomendados + `user-setup` | n/d | Lomiri inestable |
+| ISO4 | Cambios de otra IA | 260 MB | No arrancaba |
+| **ISO5** | **Recomendados + lista de 41 + limpieza** | **1,6 GB** | **Estable y limpia** |
+
+**Lecciones**
+- Con recomendados desactivados faltan piezas de forma silenciosa (usuario, sesión de Lomiri).
+- Partir de una base que funciona y quitar apps con un hook fue más fiable que construir desde una lista mínima.
+- Cambiar una sola cosa por build.
+
+**Pendiente**
+- Verificar en la ISO5: ventanas en modo escritorio, RAM en reposo, red, teclado `latam`, Software y GDebi.
+- Guardar `auto/` y `config/` en GitHub y la ISO como `mirai-v0.1`.
+- Probar en hardware real (WiFi, UEFI) y añadir un instalador.
+
+- ## Día 14 — 04/11/2026 · Verificación de la ISO5, descargas e ISO6 con Calamares
+
+**Hecho**
+- Verificada la ISO5 en una VM de prueba: RAM en reposo **658 MiB**, red y Firefox funcionan, Software y GDebi abren, el sistema está en español.
+- Subidas la ISO5 y la ISO1 a MEGA para publicarlas con enlace de descarga en el repositorio.
+- Comprobado que Calamares se puede añadir: `calamares` 3.3.14, `calamares-settings-debian`, `grub-pc-bin`, `grub-efi-amd64-bin`, `efibootmgr`, `os-prober` y `dosfstools` existen en trixie.
+- **ISO6 construida:** ISO5 + Calamares (instalador) + teclado `latam` en el `.gschema.override`. Pesa 1,7 GB.
+
+**Resultados de las pruebas de la ISO5**
+
+| Prueba | Resultado |
+|---|---|
+| RAM en reposo | 658 MiB |
+| Red y Firefox | Funcionan |
+| Software y GDebi | Abren bien |
+| Ventanas | Normales, salvo la Terminal, que se abre pegada a la esquina |
+| Teclado | Inglés (EE. UU.) en vez de `latam` |
+
+**Comparación de ISO**
+
+| ISO | Qué es | Tamaño | Resultado |
+|---|---|---|---|
+| ISO1 | Recomendados, 4 paquetes | 2,0 GB | Funciona, con todas las apps |
+| ISO2 | Sin recomendados | 1,4 GB | Sin usuario |
+| ISO3 | Sin recomendados + `user-setup` | 1,3 GB | Lomiri inestable |
+| ISO4 | Cambios de otra IA | 260 MB | No arrancaba |
+| ISO5 | Recomendados + 41 paquetes + limpieza | 1,6 GB | Estable y limpia |
+| ISO6 | ISO5 + Calamares + teclado `latam` | 1,7 GB | Por probar |
+
+**Hallazgos**
+- Calamares usa Qt6 (Lomiri usa Qt5); añadió solo ~0,1 GB a la ISO.
+- La clave de GSettings del teclado es `org.gnome.desktop.input-sources` con `[('xkb', 'latam')]`; falta comprobar en la ISO6 que Lomiri la respete.
+
+**Pendiente**
+- Probar la instalación de la ISO6 en una VM con disco virtual.
+- Subir la receta (`auto/`, `config/`) y la sección de descargas al repositorio.
+- Corregir la Terminal en la esquina.
